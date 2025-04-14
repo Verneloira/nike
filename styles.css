@@ -1,13 +1,16 @@
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     background: #ccee66;
     color: white;
     padding: 20px 160px;
     height: 100vh;
     font-family: "Noto Sans", sans-serif;
     overflow: hidden;
-
 }
 
 body::before {
@@ -34,8 +37,8 @@ body::after {
 }
 
 .logo {
-    width: 60px;
-    margin-bottom: 60px;
+    width: 80px;
+    margin-bottom: 80px;
 }
 
 h4 {
@@ -88,7 +91,6 @@ p {
 
 .caixa-texto {
     max-width: 500px;
-
 }
 
 .caixa-botoes {
@@ -106,21 +108,23 @@ p {
     cursor: pointer;
 }
 
-
 .botoes:active {
     opacity: 0.6;
 }
 
 .verde {
     background: #ccee66;
+    border: 3px solid white;
 }
 
 .azul {
     background: #58cced;
+    border: 3px solid white
 }
 
 .rosa {
     background: #ff9eb5;
+    border: 3px solid white
 }
 
 @media (max-width: 1024px) {
@@ -128,10 +132,17 @@ p {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        gap: 30px;
+        
     }
+    body::after {
+        font-size: 200px;
+    }
+
 
     .imagem-tenis {
         width: 600px;
+        transform: rotate(-20deg);
     }
 
     h1 {
@@ -139,11 +150,11 @@ p {
     }
 
     h4 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     p {
-        font-size: 14px;
+        font-size: 15px;
     }
 }
 
@@ -151,6 +162,10 @@ p {
     body {
         padding: 10px 20px;
     }
+    body::after {
+        font-size: 150px;
+    }
+
 
     .caixa-texto {
         max-width: 100%;
@@ -158,6 +173,7 @@ p {
 
     .imagem-tenis {
         width: 400px;
+        transform: rotate(-15deg);
     }
 
     h1 {
@@ -167,15 +183,35 @@ p {
     h4 {
         font-size: 20px;
     }
+
+    p {
+        font-size: 14px;
+    }
+
+    .botao-carrinho {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .botoes {
+        width: 50px;
+        height: 50px;
+    }
 }
 
 @media (max-width: 480px) {
     .caixa-principal {
         padding: 10px;
+        gap: 20px;
     }
+    body::after {
+        font-size: 100px;
+    }
+
 
     .imagem-tenis {
         width: 300px;
+        transform: rotate(-10deg);
     }
 
     h1 {
@@ -191,14 +227,12 @@ p {
     }
 
     .botao-carrinho {
-        padding: 8px 16px;
         font-size: 14px;
+        padding: 6px 12px;
     }
 
     .botoes {
-        width: 60px;
-        height: 60px;
-    }
+        width: 40px;
+        height: 40px;
+    }
 }
-
-
