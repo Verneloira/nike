@@ -106,6 +106,9 @@ p {
     height: 80px;
     border-radius: 50%;
     cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid white;
 }
 
 .botoes:active {
@@ -113,18 +116,15 @@ p {
 }
 
 .verde {
-    background: #ccee66;
-    border: 3px solid white;
+    background-image: url('./img/nike1.png');
 }
 
 .azul {
-    background: #58cced;
-    border: 3px solid white
+    background-image: url('./img/nike2.png');
 }
 
 .rosa {
-    background: #ff9eb5;
-    border: 3px solid white
+    background-image: url('./img/nike3.png');
 }
 
 @media (max-width: 1024px) {
@@ -133,12 +133,17 @@ p {
         align-items: center;
         text-align: center;
         gap: 30px;
-        
     }
+
+    body::before {
+        left: -600px;
+        transform: rotate(-65deg);
+        height: 150%;
+    }
+
     body::after {
         font-size: 200px;
     }
-
 
     .imagem-tenis {
         width: 600px;
@@ -162,10 +167,17 @@ p {
     body {
         padding: 10px 20px;
     }
+
+    body::before {
+        left: -1380px;
+        transform: rotate(-52deg);
+        height: 137%;
+        width: 582px;
+    }
+
     body::after {
         font-size: 150px;
     }
-
 
     .caixa-texto {
         max-width: 100%;
@@ -204,10 +216,17 @@ p {
         padding: 10px;
         gap: 20px;
     }
+
+    body::before {
+        width: 582px;
+        left: -104px;
+        transform: rotate(-112deg);
+        height: 127%;
+    }
+
     body::after {
         font-size: 100px;
     }
-
 
     .imagem-tenis {
         width: 300px;
